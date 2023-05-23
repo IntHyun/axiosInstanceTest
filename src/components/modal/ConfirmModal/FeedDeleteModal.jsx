@@ -8,7 +8,7 @@ const FeedDeleteModal = ({ deleteHandler, posts }) => {
 
   async function deleteFeed(value) {
     try {
-      const URL = 'https://mandarin.api.weniv.co.kr';
+      const URL = 'https://api.mandarin.weniv.co.kr';
       const authToken = localStorage.getItem('token');
       const res = await axios.delete(`${URL}/post/${value}`, {
         headers: {

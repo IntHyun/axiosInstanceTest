@@ -10,7 +10,7 @@ const PostIcon = ({ posts, postDetailId }) => {
   const [heartCount, setHeartCount] = useState(posts.heartCount);
 
   const handleLike = async () => {
-    const URL = 'https://mandarin.api.weniv.co.kr';
+    const URL = 'https://api.mandarin.weniv.co.kr';
     const authToken = localStorage.getItem('token');
     const postId = posts?.id;
 

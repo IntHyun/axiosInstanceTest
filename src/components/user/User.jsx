@@ -13,7 +13,7 @@ import {
 
 const Userfoll = ({ item }) => {
   const [isfollow, setIsFollow] = useState(item.isfollow);
-  const URL = 'https://mandarin.api.weniv.co.kr';
+  const URL = 'https://api.mandarin.weniv.co.kr';
   const authToken = localStorage.getItem('token');
   const navigate = useNavigate();
 

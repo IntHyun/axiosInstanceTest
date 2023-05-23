@@ -11,7 +11,7 @@ const initialFollowState = {
 export const getFollowing = createAsyncThunk(
   'following/getFollowing',
   async (value) => {
-    const URL = 'https://mandarin.api.weniv.co.kr';
+    const URL = 'https://api.mandarin.weniv.co.kr';
     const authToken = localStorage.getItem('token');
     // const accountName = localStorage.getItem('accountname');
     const res = await axios.get(`${URL}/profile/${value}/following?limit=150`, {
@@ -27,7 +27,7 @@ export const getFollowing = createAsyncThunk(
 export const getFollower = createAsyncThunk(
   'follower/getFollower',
   async (value) => {
-    const URL = 'https://mandarin.api.weniv.co.kr';
+    const URL = 'https://api.mandarin.weniv.co.kr';
     const authToken = localStorage.getItem('token');
     // const accountName = localStorage.getItem('accountname');
     const res = await axios.get(`${URL}/profile/${value}/follower?limit=150`, {

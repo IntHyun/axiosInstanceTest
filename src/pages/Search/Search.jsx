@@ -11,7 +11,7 @@ const Search = () => {
   const [keyword, setKeyword] = useState('');
 
   // 검색 API
-  const URL = 'https://mandarin.api.weniv.co.kr';
+  const URL = 'https://api.mandarin.weniv.co.kr';
 
   const searchUser = async (search) => {
     try {

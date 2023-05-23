@@ -13,7 +13,7 @@ const PostCard = () => {
   const [posts, setPosts] = useState('');
 
   const getPostDetail = async () => {
-    const URL = 'https://mandarin.api.weniv.co.kr';
+    const URL = 'https://api.mandarin.weniv.co.kr';
     const authToken = localStorage.getItem('token');
 
     try {

@@ -11,7 +11,7 @@ const HomeFeed = () => {
   const [btnOn, setBtnOn] = useState(false);
   const [btnAll, setBtnAll] = useState(true);
   const [feedPost, setFeedPost] = useState([]);
-  const URL = 'https://mandarin.api.weniv.co.kr';
+  const URL = 'https://api.mandarin.weniv.co.kr';
 
   useEffect(() => {
     const getFeed = async () => {

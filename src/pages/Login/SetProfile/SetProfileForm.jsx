@@ -19,7 +19,7 @@ const SetProfileForm = () => {
   const { email, password } = { ...location.state };
 
   // API 서버
-  const URL = 'https://mandarin.api.weniv.co.kr';
+  const URL = 'https://api.mandarin.weniv.co.kr';
 
   // 사용자 이미지, 사용자 이름, 계정ID
   const [profileImg, setProfileImg] = useState(profileBasicImg);

@@ -23,7 +23,7 @@ const UploadPhotoZone = () => {
     textRef.current.style.height = `${textRef.current.scrollHeight}px`;
   }, []);
   const navigate = useNavigate();
-  const URL = 'https://mandarin.api.weniv.co.kr';
+  const URL = 'https://api.mandarin.weniv.co.kr';
 
   const uploadPhoto = async () => {
     try {

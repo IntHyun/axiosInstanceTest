@@ -10,7 +10,7 @@ const CommentWrapper = ({ postDetailId }) => {
 
   const getComments = async () => {
     try {
-      const URL = 'https://mandarin.api.weniv.co.kr';
+      const URL = 'https://api.mandarin.weniv.co.kr';
       const authToken = localStorage.getItem('token');
       const res = await axios.get(
         `${URL}/post/${postDetailId.id}/comments?limit=30`,
@@ -33,7 +33,7 @@ const CommentWrapper = ({ postDetailId }) => {
 
   const postComment = async () => {
     try {
-      const URL = 'https://mandarin.api.weniv.co.kr';
+      const URL = 'https://api.mandarin.weniv.co.kr';
       const authToken = localStorage.getItem('token');
       const res = await axios.post(
         `${URL}/post/${postDetailId?.id}/comments`,

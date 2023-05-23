@@ -13,7 +13,7 @@ import {
 
 const EditProfileForm = () => {
   //
-  const URL = 'https://mandarin.api.weniv.co.kr';
+  const URL = 'https://api.mandarin.weniv.co.kr';
   const authToken = localStorage.getItem('token');
   const [username, setUsername] = useState('');
   const [accountname, setAccountname] = useState('');

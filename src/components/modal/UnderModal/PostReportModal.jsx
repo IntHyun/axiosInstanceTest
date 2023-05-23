@@ -16,7 +16,7 @@ const PostReportModal = ({ postDetailId, closeModal }) => {
   // 게시글 신고
   const ReportPost = async () => {
     try {
-      const URL = 'https://mandarin.api.weniv.co.kr';
+      const URL = 'https://api.mandarin.weniv.co.kr';
       const authToken = localStorage.getItem('token');
       const res = await axios.post(
         `${URL}/post/${postDetailId.id}/report`,

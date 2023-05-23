@@ -8,7 +8,7 @@ import logoPore from '../../assets/icons/logo-pore.svg';
 const Splash = () => {
   const [animation, setAnimation] = useState(false);
   const navigate = useNavigate();
-  const URL = 'https://mandarin.api.weniv.co.kr';
+  const URL = 'https://api.mandarin.weniv.co.kr';
 
   useEffect(() => {
     (async function tokenCheck() {

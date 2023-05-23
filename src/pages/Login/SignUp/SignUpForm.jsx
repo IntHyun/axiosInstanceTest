@@ -25,7 +25,7 @@ const SignUpForm = () => {
 
   // 이메일 유효성 검사
   const validEmail = async () => {
-    const URL = 'https://mandarin.api.weniv.co.kr';
+    const URL = 'https://api.mandarin.weniv.co.kr';
     try {
       const response = await axios.post(`${URL}/user/emailvalid`, {
         user: {

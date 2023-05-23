@@ -17,7 +17,7 @@ const DeleteEditUnder = ({
 
   const deleteComment = async () => {
     try {
-      const URL = 'https://mandarin.api.weniv.co.kr';
+      const URL = 'https://api.mandarin.weniv.co.kr';
       const authToken = localStorage.getItem('token');
       await axios.delete(
         `${URL}/post/${postDetailId?.id}/comments/${commentList.id}`,

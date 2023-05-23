@@ -27,7 +27,7 @@ const EditPostCard = () => {
     textRef.current.style.height = '1px';
     textRef.current.style.height = `${textRef.current.scrollHeight}px`;
   }, []);
-  const URL = 'https://mandarin.api.weniv.co.kr';
+  const URL = 'https://api.mandarin.weniv.co.kr';
 
   // 게시글 수정 API
   const uploadPost = async () => {

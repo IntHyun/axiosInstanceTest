@@ -21,7 +21,7 @@ const Map = () => {
 
   //   mandarin API*
   const [modals, setModals] = useState([]);
-  const URL = 'https://mandarin.api.weniv.co.kr';
+  const URL = 'https://api.mandarin.weniv.co.kr';
   const authToken = localStorage.getItem('token');
   const accountName = 'pore_photozone';
   const getModal = async () => {

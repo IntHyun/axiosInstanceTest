@@ -22,7 +22,7 @@ const Feed = () => {
   const { isDarkMode, toggleMode } = useContext(ThemeContext);
 
   const getFeed = useCallback(async () => {
-    const URL = 'https://mandarin.api.weniv.co.kr';
+    const URL = 'https://api.mandarin.weniv.co.kr';
     const authToken = localStorage.getItem('token');
     setLoading(true);
     try {

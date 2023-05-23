@@ -1,26 +1,26 @@
-import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FormStyle, InvalidSpan } from './formStyle';
 import StyledButton from '../../components/button/BtnForm';
 import { LoginContDiv, SignupLink } from './loginStyle';
+import instance from '../../api/axios';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
-  const URL = 'https://mandarin.api.weniv.co.kr';
   const navigate = useNavigate();
 
   const login = async () => {
     try {
-      const res = await axios.post(`${URL}/user/login`, {
-        user: { email: `${email}`, password: `${password}` },
-        headers: { 'Content-Type': 'application/json' },
+      const res = await instance.post('/user/login', {
+        user: { email, password },
       });
 
       if (res.data.message) {
         setErrorMsg(res.data.message);
+        console.log(email, password);
+        console.log(res);
       } else {
         localStorage.setItem('accountname', res.data.user.accountname);
         localStorage.setItem('token', res.data.user.token);

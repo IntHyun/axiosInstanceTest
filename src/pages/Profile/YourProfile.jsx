@@ -24,7 +24,7 @@ const YourProFile = () => {
   const [info, setInfo] = useState('');
   const [modal, setModal] = useState(false);
   const [view, setView] = useState(false);
-  const URL = 'https://mandarin.api.weniv.co.kr';
+  const URL = 'https://api.mandarin.weniv.co.kr';
   const parent = useRef();
   const { isDarkMode, toggleMode } = useContext(ThemeContext);
 

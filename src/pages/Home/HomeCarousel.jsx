@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import {
-  Carousel,
   Title,
   Search,
   ThumbnailWrap,
@@ -18,10 +17,11 @@ const HomeCarousel = () => {
   const TOTAL_SLIDES = 4;
   const [slideIndex, setSlideIndex] = useState(0);
   const [thumbnail, setThumbnail] = useState([]);
+
   const navigate = useNavigate();
 
   // API 서버
-  const URL = 'https://mandarin.api.weniv.co.kr';
+  const URL = 'https://api.mandarin.weniv.co.kr';
 
   // 썸네일 리스트 API
   useEffect(() => {
@@ -39,6 +39,7 @@ const HomeCarousel = () => {
         );
 
         if (response) {
+          console.log(response);
           setThumbnail(response.data.product);
         }
       } catch (error) {
@@ -90,7 +91,7 @@ const HomeCarousel = () => {
   };
 
   return (
-    <Carousel>
+    <article>
       {thumbnail.map((item, index) => (
         <ThumbnailWrap
           // eslint-disable-next-line react/no-array-index-key
@@ -132,7 +133,7 @@ const HomeCarousel = () => {
           />
         ))}
       </IconWrap>
-    </Carousel>
+    </article>
   );
 };
 
